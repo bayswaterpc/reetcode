@@ -5,14 +5,12 @@ use std::collections::HashMap;
 impl Solution {
     pub fn two_sum(nums: Vec<i32>, target: i32) -> Vec<i32> {
         let mut rem_to_pos = HashMap::new();
-        let mut ii = 0_i32;
-        for nn in nums {
+        for (ii, nn) in nums.into_iter().enumerate() {
             let rem = target - nn;
             if rem_to_pos.contains_key(&rem) {
-                return vec![*rem_to_pos.get(&rem).unwrap(), ii];
+                return vec![*rem_to_pos.get(&rem).unwrap(), ii as i32];
             }
-            rem_to_pos.insert(nn, ii);
-            ii += 1;
+            rem_to_pos.insert(nn, ii as i32);
         }
         vec![-1, -1]
     }
