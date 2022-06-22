@@ -37,7 +37,7 @@ mod test {
     use super::Solution;
 
     #[test]
-    fn roman_to_int() {
+    fn unit() {
         let i = Solution::roman_to_int("LVIII".to_string());
         assert_eq!(58, i);
     }

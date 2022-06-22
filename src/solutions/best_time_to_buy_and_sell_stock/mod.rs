@@ -25,7 +25,7 @@ mod test {
     use super::Solution;
 
     #[test]
-    fn max_profit() {
+    fn unit() {
         let prices = vec![7, 1, 5, 3, 6, 4];
         assert_eq!(5, Solution::best_time_to_buy_and_sell_stock(prices));
         // Explanation: Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6-1 = 5.

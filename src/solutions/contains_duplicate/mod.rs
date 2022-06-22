@@ -20,7 +20,7 @@ mod test {
     use super::Solution;
 
     #[test]
-    fn contains_duplicate() {
+    fn unit() {
         let nums = vec![1, 2, 3, 1];
         assert_eq!(true, Solution::contains_duplicate(nums));
 

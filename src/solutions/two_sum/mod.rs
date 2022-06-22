@@ -21,7 +21,7 @@ mod test {
     use super::Solution;
 
     #[test]
-    fn two_sum() {
+    fn unit() {
         let nums = vec![2, 7, 11, 15];
         let target = 9;
         assert_eq!(vec![0, 1], Solution::two_sum(nums, target));

@@ -25,7 +25,7 @@ mod test {
     use super::Solution;
 
     #[test]
-    fn shortest_distance() {
+    fn unit() {
         let words_dict = vec!["small".to_string(), "big".to_string()];
         let word1 = "small".to_string();
         let word2 = "big".to_string();

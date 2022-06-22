@@ -37,7 +37,7 @@ mod test {
     };
 
     #[test]
-    fn group_anagrams() {
+    fn unit() {
         let strs = str_vec_to_string_vec(vec!["eat", "tea", "tan", "ate", "nat", "bat"]);
         let ans = str_vec_2d_to_string_vec_2d(vec![
             vec!["ate", "eat", "tea"],
