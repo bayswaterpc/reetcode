@@ -1,4 +1,9 @@
+pub mod best_time_to_buy_and_sell_stock;
+pub mod contains_duplicate;
+pub mod group_anagrams;
 pub mod roman_to_integer;
+pub mod shortest_word_distance;
+pub mod two_sum;
 
 #[allow(dead_code)]
 pub struct Solution {
