@@ -28,12 +28,13 @@ impl Solution {
     }
 }
 
-
-
 mod test {
     #[allow(unused_imports)]
     use super::Solution;
-    use crate::utils::test_utils::{str_vec_2d_to_string_vec_2d, str_vec_to_string_vec, str_vec_2d_contents_same};
+    #[allow(dead_code, unused_imports)]
+    use crate::utils::test_utils::{
+        str_vec_2d_contents_same, str_vec_2d_to_string_vec_2d, str_vec_to_string_vec,
+    };
 
     #[test]
     fn group_anagrams() {
@@ -43,14 +44,23 @@ mod test {
             vec!["tan", "nat"],
             vec!["bat"],
         ]);
-        assert!(str_vec_2d_contents_same(ans, Solution::group_anagrams(strs)));
+        assert!(str_vec_2d_contents_same(
+            ans,
+            Solution::group_anagrams(strs)
+        ));
 
         let strs = str_vec_to_string_vec(vec![""]);
         let ans = str_vec_2d_to_string_vec_2d(vec![vec![""]]);
-        assert!(str_vec_2d_contents_same(ans, Solution::group_anagrams(strs)));
+        assert!(str_vec_2d_contents_same(
+            ans,
+            Solution::group_anagrams(strs)
+        ));
 
         let strs = str_vec_to_string_vec(vec!["a"]);
         let ans = str_vec_2d_to_string_vec_2d(vec![vec!["a"]]);
-        assert!(str_vec_2d_contents_same(ans, Solution::group_anagrams(strs)));
+        assert!(str_vec_2d_contents_same(
+            ans,
+            Solution::group_anagrams(strs)
+        ));
     }
 }
