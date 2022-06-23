@@ -6,6 +6,7 @@ pub mod roman_to_integer;
 pub mod shortest_word_distance;
 pub mod top_k_frequent_elements;
 pub mod two_sum;
+pub mod valid_palindrome;
 
 #[allow(dead_code)]
 pub struct Solution {
