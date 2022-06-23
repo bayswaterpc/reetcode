@@ -6,6 +6,7 @@ pub mod longest_repeating_character_replacement;
 pub mod longest_substring_without_repeating_characters;
 pub mod product_of_array_except_self;
 pub mod roman_to_integer;
+pub mod search_in_rotated_sorted_array;
 pub mod shortest_word_distance;
 pub mod three_sum;
 pub mod top_k_frequent_elements;

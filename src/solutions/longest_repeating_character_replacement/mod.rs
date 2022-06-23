@@ -1,4 +1,6 @@
 use super::Solution;
+//#time=O(n)
+//#space=O(1)
 
 /// Solution to [Longest Repeating Character Replacement](https://leetcode.com/problems/longest-repeating-character-replacement/)
 impl Solution {
