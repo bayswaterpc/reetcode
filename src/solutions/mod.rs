@@ -10,6 +10,7 @@ pub mod three_sum;
 pub mod top_k_frequent_elements;
 pub mod two_sum;
 pub mod valid_palindrome;
+pub mod valid_parentheses;
 
 #[allow(dead_code)]
 pub struct Solution {
