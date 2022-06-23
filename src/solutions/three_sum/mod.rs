@@ -18,9 +18,9 @@ impl Solution {
             while ll < rr {
                 let sum = nums[i] + nums[ll] + nums[rr];
                 match sum.cmp(&0) {
-                    std::cmp::Ordering::Less => rr -= 1,
-                    std::cmp::Ordering::Equal => ll += 1,
-                    std::cmp::Ordering::Greater => {
+                    std::cmp::Ordering::Greater => rr -= 1,
+                    std::cmp::Ordering::Less => ll += 1,
+                    std::cmp::Ordering::Equal => {
                         res.push(vec![nums[i], nums[ll], nums[rr]]);
                         ll += 1;
 
