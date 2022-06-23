@@ -2,21 +2,20 @@ use super::Solution;
 
 impl Solution {
     /// Solution to [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/)
+    //Below function def needed for leetcode
+    //pub fn product_except_self(nums: Vec<i32>) -> Vec<i32> {
     pub fn product_of_array_except_self(nums: Vec<i32>) -> Vec<i32> {
-        let mut lhps = vec![1; nums.len()];
-        let mut rhps = vec![1; nums.len()];
-        let mut ans = vec![0; nums.len()];
+        let mut ans = vec![1; nums.len()];
 
         for ii in 1..nums.len() {
-            lhps[ii] = lhps[ii - 1] * nums[ii - 1];
+            ans[ii] = ans[ii - 1] * nums[ii - 1];
         }
 
-        for ii in (0..(nums.len() - 1)).rev() {
-            rhps[ii] = rhps[ii + 1] * nums[ii + 1];
-        }
-
-        for ii in 0..nums.len() {
-            ans[ii] = lhps[ii] * rhps[ii];
+        // Right hand product sum
+        let mut rhps = 1;
+        for ii in (0..nums.len()).rev() {
+            ans[ii] *= rhps;
+            rhps *= nums[ii];
         }
 
         ans
