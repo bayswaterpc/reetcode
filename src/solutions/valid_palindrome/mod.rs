@@ -9,21 +9,20 @@ impl Solution {
     //pub fn is_palindrome(s: String) -> bool {
     pub fn valid_palindrome(s: String) -> bool {
         let s_u8 = s.as_bytes();
-        let mut ll = 0_usize;
-        let mut rr = s_u8.len() - 1;
+        let mut ll = 0_i32;
+        let mut rr = (s_u8.len() - 1) as i32;
+
         while ll < rr {
-            let mut lc = s_u8[ll] as char;
-            let mut rc = s_u8[rr] as char;
-            while ll < rr && !lc.is_alphanumeric() {
+            while ll < rr && !(s_u8[ll as usize] as char).is_alphanumeric() {
                 ll += 1;
-                lc = s_u8[ll] as char;
             }
-            while ll < rr && !rc.is_alphanumeric() {
+            while ll < rr && !(s_u8[rr as usize] as char).is_alphanumeric() {
                 rr -= 1;
-                rc = s_u8[rr] as char;
             }
 
-            if rc.to_ascii_lowercase() != lc.to_ascii_lowercase() {
+            if (s_u8[rr as usize] as char).to_ascii_lowercase()
+                != (s_u8[ll as usize] as char).to_ascii_lowercase()
+            {
                 return false;
             }
             ll += 1;
@@ -40,6 +39,10 @@ mod test {
 
     #[test]
     fn unit() {
+        let s = "a.".to_string();
+        let out = true;
+        assert_eq!(out, Solution::valid_palindrome(s));
+
         let s = "A man, a plan, a canal: Panama".to_string();
         let out = true;
         assert_eq!(out, Solution::valid_palindrome(s));
