@@ -17,22 +17,22 @@ impl Solution {
 
             while ll < rr {
                 let sum = nums[i] + nums[ll] + nums[rr];
-                if sum > 0 {
-                    rr -= 1;
-                } else if sum < 0 {
-                    ll += 1
-                } else {
-                    res.push(vec![nums[i], nums[ll], nums[rr]]);
-                    ll += 1;
-                    
-                    // Skip over repeats due to avoid duplicates
-                    while nums[ll] == nums[ll - 1] && ll < rr {
+                match sum.cmp(&0) {
+                    std::cmp::Ordering::Less => rr -= 1,
+                    std::cmp::Ordering::Equal => ll += 1,
+                    std::cmp::Ordering::Greater => {
+                        res.push(vec![nums[i], nums[ll], nums[rr]]);
                         ll += 1;
+
+                        // Skip over repeats due to avoid duplicates
+                        while nums[ll] == nums[ll - 1] && ll < rr {
+                            ll += 1;
+                        }
                     }
                 }
             }
         }
-        return res;
+        res
     }
 }
 
@@ -42,8 +42,8 @@ mod test {
 
     #[test]
     fn unit() {
-        let nums = vec![-1,0,1,2,-1,-4];
-        let mut output = vec![vec![-1,-1,2], vec![-1,0,1]];
+        let nums = vec![-1, 0, 1, 2, -1, -4];
+        let mut output = vec![vec![-1, -1, 2], vec![-1, 0, 1]];
         assert_eq!(output, Solution::three_sum(nums));
 
         let nums = vec![];
@@ -53,6 +53,5 @@ mod test {
         let nums = vec![0];
         output = vec![];
         assert_eq!(output, Solution::three_sum(nums));
-
     }
 }
