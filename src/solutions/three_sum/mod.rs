@@ -4,7 +4,7 @@ use super::Solution;
 impl Solution {
     pub fn three_sum(mut nums: Vec<i32>) -> Vec<Vec<i32>> {
         let mut res = Vec::new();
-        nums.sort();
+        nums.sort_unstable();
 
         for i in 0..nums.len() {
             // Skip repeats to avoid duplicates
