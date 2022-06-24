@@ -35,7 +35,7 @@ pub fn str_vec_2d_contents_same(strs1: Vec<Vec<String>>, strs2: Vec<Vec<String>>
 pub fn make_linked_list(vals: &[i32]) -> Option<Box<ListNode>> {
     let mut result_head = Box::new(ListNode::new(0));
     let mut curr_node = &mut result_head;
-    
+
     for val in vals.iter() {
         let v_node = Box::new(ListNode::new(*val));
         curr_node = curr_node.next.get_or_insert(v_node);

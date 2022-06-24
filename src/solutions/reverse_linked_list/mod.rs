@@ -23,7 +23,7 @@ mod test {
     #[allow(unused_imports)]
     use super::Solution;
     #[allow(unused_imports)]
-    use crate::utils::test_utils::{make_linked_list};
+    use crate::utils::test_utils::make_linked_list;
 
     #[test]
     fn reverse_linked_list() {
