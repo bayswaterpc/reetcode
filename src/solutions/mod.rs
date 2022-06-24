@@ -8,6 +8,7 @@ pub mod longest_substring_without_repeating_characters;
 pub mod merge_two_sorted_lists;
 pub mod min_stack;
 pub mod product_of_array_except_self;
+pub mod reorder_list;
 pub mod reverse_linked_list;
 pub mod roman_to_integer;
 pub mod search_in_rotated_sorted_array;
