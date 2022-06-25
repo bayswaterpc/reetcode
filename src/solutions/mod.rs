@@ -5,6 +5,7 @@ pub mod find_minimum_in_rotated_sorted_array;
 pub mod group_anagrams;
 pub mod longest_repeating_character_replacement;
 pub mod longest_substring_without_repeating_characters;
+pub mod merge_k_sorted_lists;
 pub mod merge_two_sorted_lists;
 pub mod min_stack;
 pub mod product_of_array_except_self;
