@@ -3,6 +3,7 @@ pub mod container_with_most_water;
 pub mod contains_duplicate;
 pub mod find_minimum_in_rotated_sorted_array;
 pub mod group_anagrams;
+pub mod invert_binary_tree;
 pub mod longest_repeating_character_replacement;
 pub mod longest_substring_without_repeating_characters;
 pub mod merge_k_sorted_lists;
@@ -20,7 +21,6 @@ pub mod top_k_frequent_elements;
 pub mod two_sum;
 pub mod valid_palindrome;
 pub mod valid_parentheses;
-pub mod invert_binary_tree;
 
 #[allow(dead_code)]
 pub struct Solution {

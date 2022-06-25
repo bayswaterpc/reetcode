@@ -1,7 +1,7 @@
 use super::Solution;
-use std::rc::Rc;
-use std::cell::RefCell;
 use crate::utils::common::TreeNode;
+use std::cell::RefCell;
+use std::rc::Rc;
 
 // #space=O(1)
 // #time=O(N)
@@ -9,19 +9,20 @@ use crate::utils::common::TreeNode;
 impl Solution {
     /// Solution to [Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/)
     //pub fn invert_tree(root: Option<Rc<RefCell<TreeNode>>>) -> Option<Rc<RefCell<TreeNode>>> {
-    pub fn invert_binary_tree(root: Option<Rc<RefCell<TreeNode>>>) -> Option<Rc<RefCell<TreeNode>>> {
+    pub fn invert_binary_tree(
+        root: Option<Rc<RefCell<TreeNode>>>,
+    ) -> Option<Rc<RefCell<TreeNode>>> {
         if let Some(node) = root {
             let right = node.borrow_mut().right.take();
             let left = node.borrow_mut().left.take();
             node.borrow_mut().left = Self::invert_binary_tree(right);
             node.borrow_mut().right = Self::invert_binary_tree(left);
-            return Some(node);
+            Some(node)
         } else {
-            return None;
+            None
         }
     }
 }
-
 
 pub mod test {
     #[allow(unused_imports)]
@@ -37,8 +38,8 @@ pub mod test {
 
     #[test]
     fn invert_tree() {
-        let input = [4,2,7,1,3,6,9];
-        let output = [4,7,2,9,6,3,1];
+        let input = [4, 2, 7, 1, 3, 6, 9];
+        let output = [4, 7, 2, 9, 6, 3, 1];
         test_merge_two_lists(&input, &output);
     }
 }
