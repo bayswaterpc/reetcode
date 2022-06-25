@@ -26,7 +26,7 @@ mod test {
     use crate::utils::test_utils::make_linked_list;
 
     #[test]
-    fn reverse_linked_list() {
+    fn unit() {
         let input = [1, 2, 3, 4, 5];
         let output = [5, 4, 3, 2, 1];
         let head = make_linked_list(&input);
