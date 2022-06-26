@@ -30,16 +30,16 @@ pub mod test {
     #[allow(unused_imports)]
     use crate::utils::test_utils::build_tree_from_lvl_order_list;
 
-    pub fn test_merge_two_lists(in1: &[i32], output: &[i32]) {
+    pub fn test_invert_binary_tree(in1: &[i32], output: &[i32]) {
         let in_tree = build_tree_from_lvl_order_list(in1);
         let out_tree = build_tree_from_lvl_order_list(output);
         assert_eq!(out_tree, Solution::invert_binary_tree(in_tree));
     }
 
     #[test]
-    fn invert_tree() {
+    fn unit() {
         let input = [4, 2, 7, 1, 3, 6, 9];
         let output = [4, 7, 2, 9, 6, 3, 1];
-        test_merge_two_lists(&input, &output);
+        test_invert_binary_tree(&input, &output);
     }
 }

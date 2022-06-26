@@ -1,1 +1,1 @@
-Solution to [Merge Twp Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/submissions/)
+Solution to [Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/)
