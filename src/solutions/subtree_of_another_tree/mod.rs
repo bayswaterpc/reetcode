@@ -32,23 +32,22 @@ pub mod test {
     #[allow(unused_imports)]
     use super::Solution;
     #[allow(unused_imports)]
-    use crate::utils::test_utils::build_tree_from_lvl_order_str_list;
+    use crate::utils::test_utils::build_tree_from_lvl_order_str;
 
-    pub fn test_subtree_of_another_tree(tree_arr: &[&str], subtree_arr: &[&str], output: bool) {
-        println!("{:?}", tree_arr);
-        let root = build_tree_from_lvl_order_str_list(tree_arr);
-        let sub_root = build_tree_from_lvl_order_str_list(subtree_arr);
+    pub fn test_subtree_of_another_tree(root_str: &str, subtree_arr: &str, output: bool) {
+        let root = build_tree_from_lvl_order_str(root_str);
+        let sub_root = build_tree_from_lvl_order_str(subtree_arr);
         assert_eq!(output, Solution::subtree_of_another_tree(root, sub_root));
     }
 
     #[test]
     fn subtree_of_another_tree() {
-        let tree = ["3", "4", "5", "1", "2"];
-        let subtree = ["4", "1", "2"];
+        let tree = "3,4,5,1,2";
+        let subtree = "4,1,2";
         test_subtree_of_another_tree(&tree, &subtree, true);
 
-        let tree = ["3", "4", "5", "1", "2", "null", "null", "null", "null", "0"];
-        let subtree = ["4", "1", "2"];
+        let tree = "3,4,5,1,2,null,null,null,null,0";
+        let subtree = "4,1,2";
         test_subtree_of_another_tree(&tree, &subtree, false);
     }
 }

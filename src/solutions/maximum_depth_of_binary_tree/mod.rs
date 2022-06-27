@@ -25,16 +25,16 @@ pub mod test {
     #[allow(unused_imports)]
     use super::Solution;
     #[allow(unused_imports)]
-    use crate::utils::test_utils::build_tree_from_lvl_order_str_list;
+    use crate::utils::test_utils::build_tree_from_lvl_order_str;
 
-    pub fn test_maximum_depth_of_binary_tree(in1: &[&str], output: i32) {
-        let in_tree = build_tree_from_lvl_order_str_list(in1);
+    pub fn test_maximum_depth_of_binary_tree(in1: &str, output: i32) {
+        let in_tree = build_tree_from_lvl_order_str(in1);
         assert_eq!(output, Solution::maximum_depth_of_binary_tree(in_tree));
     }
 
     #[test]
     fn unit() {
-        let input = ["3", "9", "20", "null", "null", "15", "7"];
+        let input = "3,9,20,null,null,15,7";
         let output = 3;
         test_maximum_depth_of_binary_tree(&input, output);
     }

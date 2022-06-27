@@ -1,5 +1,6 @@
 use super::common::ListNode;
 use super::common::TreeNode;
+use std::vec;
 use std::{cell::RefCell, rc::Rc};
 
 #[allow(dead_code)]
@@ -66,8 +67,9 @@ pub fn build_tree_from_lvl_order_list(vals: &[i32]) -> Option<Rc<RefCell<TreeNod
 #[allow(dead_code)]
 /// Function to create tree node from list of lvl order nodes
 /// Building from strs allows for more easily input null values.
-pub fn build_tree_from_lvl_order_str_list(vals: &[&str]) -> Option<Rc<RefCell<TreeNode>>> {
-    fn recurse(vals: &[&str], indx: usize) -> Option<Rc<RefCell<TreeNode>>> {
+pub fn build_tree_from_lvl_order_string_list(vals: &[String]) -> Option<Rc<RefCell<TreeNode>>> {
+    println!("{:?}", vals);
+    fn recurse(vals: &[String], indx: usize) -> Option<Rc<RefCell<TreeNode>>> {
         if indx >= vals.len() || vals[indx] == "null" {
             return None;
         }
@@ -81,4 +83,21 @@ pub fn build_tree_from_lvl_order_str_list(vals: &[&str]) -> Option<Rc<RefCell<Tr
         Some(node)
     }
     recurse(vals, 0)
+}
+
+#[allow(dead_code)]
+/// Function to create tree node from list of lvl order nodes
+/// Building from strs allows for more easily input null values.
+pub fn build_tree_from_lvl_order_str(vals_str: &str) -> Option<Rc<RefCell<TreeNode>>> {
+    let mut reader = csv::ReaderBuilder::new()
+        .has_headers(false)
+        .from_reader(vals_str.as_bytes());
+    let mut vals = vec![];
+    for record in reader.records() {
+        let record = record.expect("Should be valid csv cell");
+        for field in record.iter() {
+            vals.push(field.to_string());
+        }
+    }
+    build_tree_from_lvl_order_string_list(vals.as_slice())
 }

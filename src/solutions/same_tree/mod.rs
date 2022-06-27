@@ -34,26 +34,26 @@ pub mod test {
     #[allow(unused_imports)]
     use super::Solution;
     #[allow(unused_imports)]
-    use crate::utils::test_utils::build_tree_from_lvl_order_str_list;
+    use crate::utils::test_utils::build_tree_from_lvl_order_str;
 
-    pub fn test_same_tree(p_arr: &[&str], q_arr: &[&str], output: bool) {
-        let p = build_tree_from_lvl_order_str_list(p_arr);
-        let q = build_tree_from_lvl_order_str_list(q_arr);
+    pub fn test_same_tree(p_arr: &str, q_arr: &str, output: bool) {
+        let p = build_tree_from_lvl_order_str(p_arr);
+        let q = build_tree_from_lvl_order_str(q_arr);
         assert_eq!(output, Solution::same_tree(p, q));
     }
 
     #[test]
     fn same_tree() {
-        let p = ["1", "2", "3"];
-        let q = ["1", "2", "3"];
+        let p = "1,2,3";
+        let q = "1,2,3";
         test_same_tree(&p, &q, true);
 
-        let p = ["1", "2"];
-        let q = ["1", "null", "2"];
+        let p = "1,2";
+        let q = "1,null,2";
         test_same_tree(&p, &q, false);
 
-        let p = ["1", "2", "1"];
-        let q = ["1", "1", "2"];
+        let p = "1,2,1";
+        let q = "1,1,2";
         test_same_tree(&p, &q, false);
     }
 }
