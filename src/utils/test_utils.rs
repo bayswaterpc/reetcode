@@ -68,7 +68,6 @@ pub fn build_tree_from_lvl_order_list(vals: &[i32]) -> Option<Rc<RefCell<TreeNod
 /// Function to create tree node from list of lvl order nodes
 /// Building from strs allows for more easily input null values.
 pub fn build_tree_from_lvl_order_string_list(vals: &[String]) -> Option<Rc<RefCell<TreeNode>>> {
-    println!("{:?}", vals);
     fn recurse(vals: &[String], indx: usize) -> Option<Rc<RefCell<TreeNode>>> {
         if indx >= vals.len() || vals[indx] == "null" {
             return None;

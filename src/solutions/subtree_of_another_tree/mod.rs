@@ -41,7 +41,7 @@ pub mod test {
     }
 
     #[test]
-    fn subtree_of_another_tree() {
+    fn unit() {
         let tree = "3,4,5,1,2";
         let subtree = "4,1,2";
         test_subtree_of_another_tree(&tree, &subtree, true);

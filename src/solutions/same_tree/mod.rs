@@ -43,7 +43,7 @@ pub mod test {
     }
 
     #[test]
-    fn same_tree() {
+    fn unit() {
         let p = "1,2,3";
         let q = "1,2,3";
         test_same_tree(&p, &q, true);
