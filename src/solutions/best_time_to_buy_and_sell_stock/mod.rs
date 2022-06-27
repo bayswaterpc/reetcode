@@ -2,9 +2,12 @@ use super::Solution;
 
 impl Solution {
     /// Solution to [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)
-    // in leetcode use below def
-    // pub fn max_profit(prices: Vec<i32>) -> i32 {
+    /// time=O(N)
+    /// space=O(1)
+    /// #slidingwindow
     pub fn best_time_to_buy_and_sell_stock(prices: Vec<i32>) -> i32 {
+        // in leetcode use below def
+        // pub fn max_profit(prices: Vec<i32>) -> i32 {
         let mut min_price = i32::MAX;
         let mut max_profit = 0;
 

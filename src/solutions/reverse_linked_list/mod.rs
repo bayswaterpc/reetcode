@@ -1,11 +1,11 @@
 use super::Solution;
 use crate::utils::common::ListNode;
 use std::mem;
-// #space=O(1)
-// #time=O(N)
 
 impl Solution {
     /// Solution to [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/)
+    /// time=O(N)
+    /// space=O(N)
     // in leetcode use below def
     //pub fn reverse_list(head: Option<Box<ListNode>>) -> Option<Box<ListNode>> {
     pub fn reverse_linked_list(head: Option<Box<ListNode>>) -> Option<Box<ListNode>> {

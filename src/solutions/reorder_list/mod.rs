@@ -4,7 +4,7 @@ use crate::utils::common::ListNode;
 // #time=O(N)
 
 impl Solution {
-    /// Solution https://leetcode.com/problems/reorder-list/
+    /// Solution <https://leetcode.com/problems/reorder-list/>
     pub fn reorder_list(head: &mut Option<Box<ListNode>>) {
         if head.is_none() {
             return;

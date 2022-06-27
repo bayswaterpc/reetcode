@@ -3,7 +3,6 @@ use crate::utils::common::TreeNode;
 use std::cell::RefCell;
 use std::rc::Rc;
 
-
 // #space=O(1)
 // #time=O(N)
 
@@ -12,7 +11,7 @@ impl Solution {
     /// Solution to [Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/)
     // pub fn is_valid_bst(root: OptTreeNode) -> bool {
     pub fn validate_binary_search(root: OptTreeNode) -> bool {
-        fn recurse(node: &OptTreeNode, low: i32, high: i32) -> bool{
+        fn recurse(node: &OptTreeNode, low: i32, high: i32) -> bool {
             match node {
                 None => true,
                 Some(nd) => {
@@ -25,7 +24,7 @@ impl Solution {
                 }
             }
         }
-        
+
         recurse(&root, i32::MIN, i32::MAX)
     }
 }
@@ -43,11 +42,9 @@ pub mod test {
 
     #[test]
     fn unit() {
-
         let tree = "2147483647";
         let is_valid = true;
         test_validate_binary_search(tree, is_valid);
-
 
         let tree = "2,1,3";
         let is_valid = true;
@@ -60,6 +57,5 @@ pub mod test {
         let tree = "5,4,6,null,null,3,7";
         let is_valid = false;
         test_validate_binary_search(tree, is_valid);
-
     }
 }

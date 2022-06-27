@@ -41,7 +41,7 @@ pub mod test {
     }
 
     #[test]
-    fn binary_tree_level_order_traversal() {
+    fn unit() {
         let tree = "3,9,20,null,null,15,7";
         let lvls = vec![vec![3], vec![9, 20], vec![15, 7]];
         test_binary_tree_level_order_traversal(tree, lvls);

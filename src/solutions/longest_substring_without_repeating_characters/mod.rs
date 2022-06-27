@@ -1,8 +1,12 @@
 use super::Solution;
 
-/// Solution to [longest_substring_without_repeating_characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
-//pub fn max_area(height: Vec<i32>) -> i32 {
 impl Solution {
+    /// Solution to [longest_substring_without_repeating_characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
+    /// #slidingwindow
+    /// time=O(N)
+    /// space=O(min(m,n))+O(m) where m is size of charset
+    // in leetcode use below def
+    // pub fn length_of_longest_substring(s: String) -> i32 {
     pub fn longest_substring_without_repeating_characters(s: String) -> i32 {
         let mut last_index_without_char_map = [0; 127];
         let mut ll = 0;

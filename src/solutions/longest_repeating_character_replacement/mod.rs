@@ -2,8 +2,12 @@ use super::Solution;
 //#time=O(n)
 //#space=O(1)
 
-/// Solution to [Longest Repeating Character Replacement](https://leetcode.com/problems/longest-repeating-character-replacement/)
 impl Solution {
+    /// Solution to [Longest Repeating Character Replacement](https://leetcode.com/problems/longest-repeating-character-replacement/)
+    /// #slidingwindow
+    /// time=O(N)
+    /// space=O(1)
+    // in leetcode use below def
     // Use below in leetcode
     //pub fn character_replacement(s: String, k: i32) -> i32 {
     pub fn longest_repeating_character_replacement(s: String, k: i32) -> i32 {
