@@ -1,5 +1,7 @@
 pub mod best_time_to_buy_and_sell_stock;
 pub mod binary_tree_level_order_traversal;
+pub mod binary_tree_maximum_path_sum;
+pub mod construct_binary_tree_from_preorder_and_inorder_traversal;
 pub mod container_with_most_water;
 pub mod contains_duplicate;
 pub mod find_minimum_in_rotated_sorted_array;
