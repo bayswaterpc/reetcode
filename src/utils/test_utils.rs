@@ -68,20 +68,79 @@ pub fn build_tree_from_lvl_order_list(vals: &[i32]) -> Option<Rc<RefCell<TreeNod
 /// Function to create tree node from list of lvl order nodes
 /// Building from strs allows for more easily input null values.
 pub fn build_tree_from_lvl_order_string_list(vals: &[String]) -> Option<Rc<RefCell<TreeNode>>> {
-    fn recurse(vals: &[String], indx: usize) -> Option<Rc<RefCell<TreeNode>>> {
-        if indx >= vals.len() || vals[indx] == "null" {
-            return None;
-        }
-        let val: i32 = vals[indx]
-            .parse()
-            .expect("Must always be valid num or null");
-        let node = Rc::new(RefCell::new(TreeNode::new(val)));
-        node.borrow_mut().left = recurse(vals, 2 * indx + 1);
-        node.borrow_mut().right = recurse(vals, 2 * indx + 2);
-
-        Some(node)
+    if vals.len() == 0 || vals[0] == "null" {
+        return None;
     }
-    recurse(vals, 0)
+    let r_val: i32 = vals[0].parse().expect("only valid numeric allowed");
+    let root = Rc::new(RefCell::new(TreeNode::new(r_val)));
+    let mut queue = std::collections::VecDeque::new();
+    queue.push_back(root.clone());
+    let mut ii: usize = 1;
+
+    while !queue.is_empty() && ii < vals.len() {
+        let node = queue.pop_front().unwrap();
+        match vals[ii].as_str() {
+            "null" => {}
+            _ => {
+                let val: i32 = vals[ii].parse().unwrap();
+                let left = Rc::new(RefCell::new(TreeNode::new(val)));
+                node.borrow_mut().left = Some(left.clone());
+                queue.push_back(left);
+            }
+        }
+        ii += 1;
+        if ii >= vals.len(){
+            return Some(root);
+        }
+        match vals[ii].as_str() {
+            "null" => {}
+            _ => {
+                let val: i32 = vals[ii].parse().unwrap();
+                let right = Rc::new(RefCell::new(TreeNode::new(val)));
+                node.borrow_mut().right = Some(right.clone());
+                queue.push_back(right);
+            }
+        }
+        ii += 1;
+    }
+    Some(root)
+}
+
+
+pub fn deserialize(data: String) -> Option<Rc<RefCell<TreeNode>>> {
+    let lst: Vec<Option<i32>> = data
+        .split(",")
+        .map(|s| {
+            if s == "null" {
+                None
+            } else {
+                Some(s.parse::<i32>().unwrap())
+            }
+        })
+        .collect();
+
+    let root = match lst[0] {
+        Some(a) => Rc::new(RefCell::new(TreeNode::new(a))),
+        None => return None,
+    };
+    let mut cur = 1;
+    let mut queue = std::collections::VecDeque::new();
+    queue.push_back(root.clone());
+    while let Some(node) = queue.pop_front() {
+        if let Some(a) = lst[cur] {
+            let l = Rc::new(RefCell::new(TreeNode::new(a)));
+            node.borrow_mut().left = Some(l.clone());
+            queue.push_back(l);
+        }
+        cur += 1;
+        if let Some(a) = lst[cur] {
+            let r = Rc::new(RefCell::new(TreeNode::new(a)));
+            node.borrow_mut().right = Some(r.clone());
+            queue.push_back(r);
+        }
+        cur += 1;
+    }
+    Some(root)
 }
 
 #[allow(dead_code)]
