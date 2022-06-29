@@ -14,7 +14,7 @@ pub struct Trie {
 }
 
 impl Trie {
-    fn new() -> Self {
+    pub fn new() -> Self {
         Default::default()
     }
 
@@ -43,14 +43,14 @@ impl Trie {
     }
 
     /// Checks if the word is in the trie
-    fn search(&self, word: String) -> bool {
+    pub fn search(&self, word: String) -> bool {
         Self::node_search(self, &word)
             .map(|node| node.end_of_word)
             .unwrap_or(false)
     }
 
     /// Checks if the prefix is in the trie
-    fn starts_with(&self, prefix: String) -> bool {
+    pub fn starts_with(&self, prefix: String) -> bool {
         Self::node_search(self, &prefix).is_some()
     }
 }

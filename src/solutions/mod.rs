@@ -4,6 +4,7 @@ pub mod binary_tree_maximum_path_sum;
 pub mod construct_binary_tree_from_preorder_and_inorder_traversal;
 pub mod container_with_most_water;
 pub mod contains_duplicate;
+pub mod design_add_and_search_words_data_structure;
 pub mod find_minimum_in_rotated_sorted_array;
 pub mod group_anagrams;
 pub mod implement_trie_prefix_tree;
@@ -19,6 +20,7 @@ pub mod min_stack;
 pub mod product_of_array_except_self;
 pub mod remove_nth_node_from_end_of_list;
 pub mod reorder_list;
+pub mod repeated_substring_pattern;
 pub mod reverse_linked_list;
 pub mod roman_to_integer;
 pub mod same_tree;
@@ -32,6 +34,7 @@ pub mod two_sum;
 pub mod valid_palindrome;
 pub mod valid_parentheses;
 pub mod validate_binary_search;
+pub mod word_search_ii;
 
 #[allow(dead_code)]
 #[derive(Default)]
