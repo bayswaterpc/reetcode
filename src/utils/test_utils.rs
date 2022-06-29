@@ -106,7 +106,6 @@ pub fn build_tree_from_lvl_order_string_list(vals: &[String]) -> Option<Rc<RefCe
     Some(root)
 }
 
-
 #[allow(dead_code)]
 /// Function to create tree node from list of lvl order nodes
 /// Building from strs allows for more easily input null values.

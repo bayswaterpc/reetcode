@@ -6,6 +6,7 @@ pub mod container_with_most_water;
 pub mod contains_duplicate;
 pub mod find_minimum_in_rotated_sorted_array;
 pub mod group_anagrams;
+pub mod implement_trie_prefix_tree;
 pub mod invert_binary_tree;
 pub mod kth_smallest_element_in_a_bst;
 pub mod longest_repeating_character_replacement;
@@ -31,7 +32,6 @@ pub mod two_sum;
 pub mod valid_palindrome;
 pub mod valid_parentheses;
 pub mod validate_binary_search;
-pub mod implement_trie_prefix_tree;
 
 #[allow(dead_code)]
 #[derive(Default)]
