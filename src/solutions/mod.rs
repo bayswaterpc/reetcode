@@ -5,6 +5,7 @@ pub mod construct_binary_tree_from_preorder_and_inorder_traversal;
 pub mod container_with_most_water;
 pub mod contains_duplicate;
 pub mod design_add_and_search_words_data_structure;
+pub mod find_median_from_datastream;
 pub mod find_minimum_in_rotated_sorted_array;
 pub mod group_anagrams;
 pub mod implement_trie_prefix_tree;
