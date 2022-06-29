@@ -22,6 +22,7 @@ pub mod reverse_linked_list;
 pub mod roman_to_integer;
 pub mod same_tree;
 pub mod search_in_rotated_sorted_array;
+pub mod serialize_and_deserialize_binary_tree;
 pub mod shortest_word_distance;
 pub mod subtree_of_another_tree;
 pub mod three_sum;
@@ -30,17 +31,8 @@ pub mod two_sum;
 pub mod valid_palindrome;
 pub mod valid_parentheses;
 pub mod validate_binary_search;
+pub mod implement_trie_prefix_tree;
 
 #[allow(dead_code)]
-pub struct Solution {
-    _na: String,
-}
-
-impl Default for Solution {
-    #[allow(dead_code)]
-    fn default() -> Solution {
-        Solution {
-            _na: "".to_string(),
-        }
-    }
-}
+#[derive(Default)]
+pub struct Solution {}

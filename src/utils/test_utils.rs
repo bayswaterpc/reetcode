@@ -68,7 +68,7 @@ pub fn build_tree_from_lvl_order_list(vals: &[i32]) -> Option<Rc<RefCell<TreeNod
 /// Function to create tree node from list of lvl order nodes
 /// Building from strs allows for more easily input null values.
 pub fn build_tree_from_lvl_order_string_list(vals: &[String]) -> Option<Rc<RefCell<TreeNode>>> {
-    if vals.len() == 0 || vals[0] == "null" {
+    if vals.is_empty() || vals[0] == "null" {
         return None;
     }
     let r_val: i32 = vals[0].parse().expect("only valid numeric allowed");
@@ -89,7 +89,7 @@ pub fn build_tree_from_lvl_order_string_list(vals: &[String]) -> Option<Rc<RefCe
             }
         }
         ii += 1;
-        if ii >= vals.len(){
+        if ii >= vals.len() {
             return Some(root);
         }
         match vals[ii].as_str() {
@@ -107,48 +107,18 @@ pub fn build_tree_from_lvl_order_string_list(vals: &[String]) -> Option<Rc<RefCe
 }
 
 
-pub fn deserialize(data: String) -> Option<Rc<RefCell<TreeNode>>> {
-    let lst: Vec<Option<i32>> = data
-        .split(",")
-        .map(|s| {
-            if s == "null" {
-                None
-            } else {
-                Some(s.parse::<i32>().unwrap())
-            }
-        })
-        .collect();
-
-    let root = match lst[0] {
-        Some(a) => Rc::new(RefCell::new(TreeNode::new(a))),
-        None => return None,
-    };
-    let mut cur = 1;
-    let mut queue = std::collections::VecDeque::new();
-    queue.push_back(root.clone());
-    while let Some(node) = queue.pop_front() {
-        if let Some(a) = lst[cur] {
-            let l = Rc::new(RefCell::new(TreeNode::new(a)));
-            node.borrow_mut().left = Some(l.clone());
-            queue.push_back(l);
-        }
-        cur += 1;
-        if let Some(a) = lst[cur] {
-            let r = Rc::new(RefCell::new(TreeNode::new(a)));
-            node.borrow_mut().right = Some(r.clone());
-            queue.push_back(r);
-        }
-        cur += 1;
-    }
-    Some(root)
-}
-
 #[allow(dead_code)]
 /// Function to create tree node from list of lvl order nodes
 /// Building from strs allows for more easily input null values.
 pub fn build_tree_from_lvl_order_str(vals_str: &str) -> Option<Rc<RefCell<TreeNode>>> {
+    let vals = build_string_vec_from_str_line(vals_str);
+    build_tree_from_lvl_order_string_list(vals.as_slice())
+}
+
+pub fn build_string_vec_from_str_line(vals_str: &str) -> Vec<String> {
     let mut reader = csv::ReaderBuilder::new()
         .has_headers(false)
+        .trim(csv::Trim::All)
         .from_reader(vals_str.as_bytes());
     let mut vals = vec![];
     for record in reader.records() {
@@ -157,5 +127,5 @@ pub fn build_tree_from_lvl_order_str(vals_str: &str) -> Option<Rc<RefCell<TreeNo
             vals.push(field.to_string());
         }
     }
-    build_tree_from_lvl_order_string_list(vals.as_slice())
+    vals
 }
