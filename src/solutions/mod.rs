@@ -1,6 +1,7 @@
 pub mod best_time_to_buy_and_sell_stock;
 pub mod binary_tree_level_order_traversal;
 pub mod binary_tree_maximum_path_sum;
+pub mod combination_sum;
 pub mod combination_sum_iii;
 pub mod construct_binary_tree_from_preorder_and_inorder_traversal;
 pub mod container_with_most_water;
@@ -36,6 +37,7 @@ pub mod two_sum;
 pub mod valid_palindrome;
 pub mod valid_parentheses;
 pub mod validate_binary_search;
+pub mod word_search;
 pub mod word_search_ii;
 
 #[allow(dead_code)]
