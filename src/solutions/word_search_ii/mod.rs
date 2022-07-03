@@ -10,7 +10,8 @@ impl Solution {
     /// Solution to [Word Search II](https://leetcode.com/problems/word-search-ii/)
     /// #time=O(M(4⋅3^(L−1))) where M is the size of the board and L is the maximum length of a word
     /// #space=O(N) where N is the number of letters in the trie
-    pub fn find_words(board: Vec<Vec<char>>, words: Vec<String>) -> Vec<String> {
+    //pub fn find_words(board: Vec<Vec<char>>, words: Vec<String>) -> Vec<String> {
+    pub fn word_search_ii(board: Vec<Vec<char>>, words: Vec<String>) -> Vec<String> {
         let mut trie = Trie::default();
         for word in &words {
             let mut node = &mut trie;
@@ -85,7 +86,7 @@ pub mod test {
             .collect::<Vec<String>>();
 
         let expected_set: HashSet<String> = HashSet::from_iter(output);
-        let out_set: HashSet<String> = HashSet::from_iter(Solution::find_words(board, words));
+        let out_set: HashSet<String> = HashSet::from_iter(Solution::word_search_ii(board, words));
         assert_eq!(expected_set, out_set);
     }
 
