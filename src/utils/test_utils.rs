@@ -1,5 +1,5 @@
-use super::common::ListNode;
-use super::common::TreeNode;
+use super::common::{ListNode, TreeNode};
+use std::collections::HashSet;
 use std::vec;
 use std::{cell::RefCell, rc::Rc};
 
@@ -127,4 +127,12 @@ pub fn build_string_vec_from_str_line(vals_str: &str) -> Vec<String> {
         }
     }
     vals
+}
+
+pub fn index_set_from_vecs(vec_of_indicies: Vec<Vec<i32>>) -> HashSet<(i32, i32)> {
+    let mut set = HashSet::new();
+    for xy in vec_of_indicies.into_iter() {
+        set.insert((xy[0], xy[1]));
+    }
+    set
 }

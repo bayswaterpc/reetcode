@@ -20,6 +20,8 @@ pub mod maximum_depth_of_binary_tree;
 pub mod merge_k_sorted_lists;
 pub mod merge_two_sorted_lists;
 pub mod min_stack;
+pub mod number_of_islands;
+pub mod pacific_antlantic_water_flow;
 pub mod product_of_array_except_self;
 pub mod remove_nth_node_from_end_of_list;
 pub mod reorder_list;
@@ -39,7 +41,6 @@ pub mod valid_parentheses;
 pub mod validate_binary_search;
 pub mod word_search;
 pub mod word_search_ii;
-
 #[allow(dead_code)]
 #[derive(Default)]
 pub struct Solution {}
