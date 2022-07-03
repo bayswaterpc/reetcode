@@ -7,6 +7,9 @@ struct Trie {
 }
 
 impl Solution {
+    /// Solution to [Word Search II](https://leetcode.com/problems/word-search-ii/)
+    /// #time=O(M(4⋅3^(L−1))) where M is the size of the board and L is the maximum length of a word
+    /// #space=O(N) where N is the number of letters in the trie
     pub fn find_words(board: Vec<Vec<char>>, words: Vec<String>) -> Vec<String> {
         let mut trie = Trie::default();
         for word in &words {
