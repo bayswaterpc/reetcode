@@ -1,11 +1,13 @@
 pub mod best_time_to_buy_and_sell_stock;
 pub mod binary_tree_level_order_traversal;
 pub mod binary_tree_maximum_path_sum;
+pub mod climbing_stairs;
 pub mod combination_sum;
 pub mod combination_sum_iii;
 pub mod construct_binary_tree_from_preorder_and_inorder_traversal;
 pub mod container_with_most_water;
 pub mod contains_duplicate;
+pub mod course_schedule;
 pub mod design_add_and_search_words_data_structure;
 pub mod find_median_from_datastream;
 pub mod find_minimum_in_rotated_sorted_array;
@@ -20,8 +22,9 @@ pub mod maximum_depth_of_binary_tree;
 pub mod merge_k_sorted_lists;
 pub mod merge_two_sorted_lists;
 pub mod min_stack;
+pub mod number_of_connected_components_in_an_undirected_graph;
 pub mod number_of_islands;
-pub mod pacific_antlantic_water_flow;
+pub mod pacific_atlantic_water_flow;
 pub mod product_of_array_except_self;
 pub mod remove_nth_node_from_end_of_list;
 pub mod reorder_list;
@@ -41,6 +44,7 @@ pub mod valid_parentheses;
 pub mod validate_binary_search;
 pub mod word_search;
 pub mod word_search_ii;
+
 #[allow(dead_code)]
 #[derive(Default)]
 pub struct Solution {}
