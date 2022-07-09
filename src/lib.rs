@@ -1,2 +1,2 @@
-pub mod solutions;
+pub mod problems;
 pub mod utils;

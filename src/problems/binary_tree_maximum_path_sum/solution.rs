@@ -1,4 +1,4 @@
-use super::Solution;
+use crate::problems::Solution;
 use crate::utils::common::TreeNode;
 use std::cell::RefCell;
 use std::rc::Rc;

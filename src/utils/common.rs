@@ -30,3 +30,5 @@ impl TreeNode {
         }
     }
 }
+
+pub type OptTreeNode = Option<Rc<RefCell<TreeNode>>>;

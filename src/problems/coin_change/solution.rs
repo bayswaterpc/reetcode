@@ -1,9 +1,9 @@
-use super::Solution;
+use crate::problems::Solution;
 
 impl Solution {
     /// Solution to [Coin Change](https://leetcode.com/problems/coin-change/)
-    /// #time=O(S*N) where S is the amount and N is the number of coins
-    /// #space=O(A) where S is the amount and memoization array
+    /// #time=O(A*N) where A is the amount and N is the number of coins
+    /// #space=O(A) where A is the amount
     pub fn coin_change(coins: Vec<i32>, amount: i32) -> i32 {
         fn recurse(coins: &[i32], num_coins_2_amnt: &mut [i32], rem: i32) -> i32 {
             if rem < 0 {
@@ -41,11 +41,6 @@ pub mod test {
 
     #[test]
     fn unit() {
-        let candidates = vec![1, 2, 5];
-        let amount = 11;
-        let out = 3;
-        assert_eq!(out, Solution::coin_change(candidates, amount));
-
         let candidates = vec![1, 2, 5];
         let amount = 11;
         let out = 3;

@@ -1,13 +1,26 @@
 use super::Solution;
-use crate::utils::common::ListNode;
 use std::cmp::{Ordering, Reverse};
 use std::collections::BinaryHeap;
 
-// #space=O(1)
-// #time=O(N*log(k))
+
+
+#[derive(PartialEq, Eq, Clone, Debug)]
+pub struct ListNode {
+    pub val: i32,
+    pub next: Option<Box<ListNode>>,
+}
+
+impl ListNode {
+    #[inline]
+    pub fn new(val: i32) -> Self {
+        ListNode { val, next: None }
+    }
+}
 
 impl Solution {
     /// Solution to [Merge K Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/)
+    /// #space=O(1)
+    /// #time=O(N*log(k))
     // in leetcode use below def
     // pub fn merge_k_lists(lists: Vec<Option<Box<ListNode>>>) -> Option<Box<ListNode>> {
     pub fn merge_k_sorted_lists(lists: Vec<Option<Box<ListNode>>>) -> Option<Box<ListNode>> {
@@ -46,10 +59,21 @@ impl Ord for ListNode {
 
 pub mod test {
     #[allow(unused_imports)]
-    use super::Solution;
-    use crate::utils::common::ListNode;
-    #[allow(unused_imports)]
-    use crate::utils::test_utils::make_linked_list;
+    use super::{Solution, ListNode};
+
+
+    pub fn make_linked_list(vals: &[i32]) -> Option<Box<ListNode>> {
+        let mut result_head = Box::new(ListNode::new(0));
+        let mut curr_node = &mut result_head;
+
+        for val in vals.iter() {
+            let v_node = Box::new(ListNode::new(*val));
+            curr_node = curr_node.next.get_or_insert(v_node);
+        }
+
+        result_head.next
+    }
+
 
     pub fn test_merge_k_sorted_lists(input: Vec<Vec<i32>>, output: &[i32]) {
         let lists: Vec<Option<Box<ListNode>>> = input

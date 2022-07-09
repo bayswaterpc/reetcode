@@ -1,14 +1,10 @@
-use super::Solution;
-use crate::utils::common::TreeNode;
-use std::cell::RefCell;
-use std::rc::Rc;
+use crate::problems::Solution;
+use crate::utils::common::OptTreeNode;
 
-// #space=O(1)
-// #time=O(N)
-
-type OptTreeNode = Option<Rc<RefCell<TreeNode>>>;
 impl Solution {
     /// Solution to [Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/)
+    /// #space=O(1)
+    /// #time=O(N)
     //pub fn level_order(root: OptTreeNode) -> Vec<Vec<i32>> {
     pub fn binary_tree_level_order_traversal(root: OptTreeNode) -> Vec<Vec<i32>> {
         let mut res: Vec<Vec<i32>> = Vec::new();

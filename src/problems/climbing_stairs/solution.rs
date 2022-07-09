@@ -1,4 +1,4 @@
-use super::Solution;
+use crate::problems::Solution;
 
 impl Solution {
     /// Solution to [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/)
