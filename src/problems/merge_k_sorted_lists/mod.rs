@@ -2,8 +2,6 @@ use super::Solution;
 use std::cmp::{Ordering, Reverse};
 use std::collections::BinaryHeap;
 
-
-
 #[derive(PartialEq, Eq, Clone, Debug)]
 pub struct ListNode {
     pub val: i32,
@@ -59,8 +57,7 @@ impl Ord for ListNode {
 
 pub mod test {
     #[allow(unused_imports)]
-    use super::{Solution, ListNode};
-
+    use super::{ListNode, Solution};
 
     pub fn make_linked_list(vals: &[i32]) -> Option<Box<ListNode>> {
         let mut result_head = Box::new(ListNode::new(0));
@@ -73,7 +70,6 @@ pub mod test {
 
         result_head.next
     }
-
 
     pub fn test_merge_k_sorted_lists(input: Vec<Vec<i32>>, output: &[i32]) {
         let lists: Vec<Option<Box<ListNode>>> = input

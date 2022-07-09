@@ -31,7 +31,6 @@ pub mod test {
     #[allow(unused_imports)]
     use super::super::solution::test::test_binary_tree_maximum_path_sum;
 
-
     #[allow(dead_code)]
     // #[test] //comment out above with and run `cargo test unq_test_name`
     fn unit() {

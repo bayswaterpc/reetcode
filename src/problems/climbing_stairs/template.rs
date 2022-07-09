@@ -3,7 +3,6 @@ pub fn climbing_stairs(n: i32) -> i32 {
     0
 }
 
-
 mod test {
 
     #[allow(dead_code)]

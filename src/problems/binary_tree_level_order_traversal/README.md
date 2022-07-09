@@ -33,7 +33,7 @@ cargo test unq_test_name
 2. If you wish to keep the test name as `unit` and run the following w/ submission name
 
 ```bash
-cargo test --package reetcode --lib -- problems::binary_tree_level_order_traversal::submissions::{submissionUuid}::test::unit
+cargo test --package reetcode --lib -- problems::{problemName}::submissions::{submissionUuid}::test::unit
 ```
 
 3. Use your IDE's run & debug feature ex: VsCode's
