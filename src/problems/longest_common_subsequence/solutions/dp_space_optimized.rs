@@ -21,7 +21,7 @@ pub fn longest_common_subsequence(text1: String, text2: String) -> i32 {
         }
         std::mem::swap(&mut current, &mut previous);
     }
-    return previous[0];
+    previous[0]
 }
 
 pub mod test {

@@ -4,7 +4,7 @@ struct UnionFind {
 
 impl UnionFind {
     pub fn new(n: usize) -> Self {
-        let parents = (0..n).map(|n| n).collect();
+        let parents = (0..n).collect();
         UnionFind { parents }
     }
 
