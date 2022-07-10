@@ -56,6 +56,8 @@ pub mod validate_binary_search;
 pub mod word_break;
 pub mod word_search;
 pub mod word_search_ii;
+pub mod graph_valid_tree;
+pub mod longest_common_subsequence;
 
 #[allow(dead_code)]
 #[derive(Default)]

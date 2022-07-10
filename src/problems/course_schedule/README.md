@@ -14,7 +14,7 @@ cd src/problems/binary_tree_level_order_traversal/submissions
 cp template.rs {submissionUuid}.rs
 ```
 
-Update [subissions/mod.rs](./submissions/mod.rs)
+Update [submissions/mod.rs](./submissions/mod.rs)
 
 Have fun making your own implementation :)
 

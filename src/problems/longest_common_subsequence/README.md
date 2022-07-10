@@ -1,16 +1,16 @@
-# Binary Tree Level Order Traversal
+# {Problem Name}
 
-See [leetcode](https://leetcode.com/problems/binary-tree-level-order-traversal/) for problem description.
+See [leetcode](https://leetcode.com/problems/longest-common-subsequence) for problem description.
 
-If you get stuck you can peak at the [solution](./solution.rs)
+If you get stuck you can peak at the [solutions](./solutions)
 
 ## Make a new submission
 
-Copy [template.rs](./template.rs)
+Copy [template.rs](./submissions/template.rs)
 
 ```bash
 #from root
-cd src/problems/binary_tree_level_order_traversal/submissions
+cd src/problems/{problem_name}/submissions
 cp template.rs {submissionUuid}.rs
 ```
 
@@ -33,7 +33,7 @@ cargo test unq_test_name
 2. If you wish to keep the test name as `unit` and run the following w/ submission name
 
 ```bash
-cargo test --package reetcode --lib -- problems::{problemName}::submissions::{submissionUuid}::test::unit
+cargo test --package reetcode --lib -- problems::{problem_name}::submissions::{submissionUuid}::test::unit
 ```
 
 3. Use your IDE's run & debug feature ex: VsCode's

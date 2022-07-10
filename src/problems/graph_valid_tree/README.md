@@ -1,16 +1,16 @@
-# Binary Tree Level Order Traversal
+# Graph Valid Tree
 
-See [leetcode](https://leetcode.com/problems/binary-tree-level-order-traversal/) for problem description.
+See [leetcode](https://leetcode.com/problems/graph-valid-tree/) for problem description.
 
 If you get stuck you can peak at the [solution](./solution.rs)
 
 ## Make a new submission
 
-Copy [template.rs](./template.rs)
+Copy [template.rs](./submissions/template.rs)
 
 ```bash
 #from root
-cd src/problems/binary_tree_level_order_traversal/submissions
+cd src/problems/graph_valid_tree/submissions
 cp template.rs {submissionUuid}.rs
 ```
 
