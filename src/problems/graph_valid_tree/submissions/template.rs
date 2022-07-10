@@ -14,12 +14,12 @@ pub mod test {
     // cargo test --package reetcode --lib -- problems::{problemName}::submissions::{submissionUuid}::test::unit --exact --nocapture
     fn unit() {
         let n = 5;
-        let edges = array2d_to_vec2d([[0,1],[0,2],[0,3],[1,4]]);
+        let edges = array2d_to_vec2d([[0, 1], [0, 2], [0, 3], [1, 4]]);
         let output = true;
         assert_eq!(output, super::valid_tree(n, edges));
 
         let n = 5;
-        let edges = array2d_to_vec2d([[0,1],[1,2],[2,3],[1,3],[1,4]]);
+        let edges = array2d_to_vec2d([[0, 1], [1, 2], [2, 3], [1, 3], [1, 4]]);
         let output = false;
         assert_eq!(output, super::valid_tree(n, edges));
     }

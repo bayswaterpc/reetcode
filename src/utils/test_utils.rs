@@ -1,7 +1,7 @@
 use super::common::{ListNode, TreeNode};
 use std::collections::HashSet;
-use std::{vec, usize};
 use std::{cell::RefCell, rc::Rc};
+use std::{usize, vec};
 
 #[allow(dead_code)]
 pub fn str_vec_to_string_vec(str_vec: Vec<&str>) -> Vec<String> {
@@ -34,9 +34,10 @@ pub fn str_vec_2d_contents_same(strs1: Vec<Vec<String>>, strs2: Vec<Vec<String>>
     sorted_strs1 == sorted_strs2
 }
 
-
 #[allow(dead_code)]
-pub fn array2d_to_vec2d<T: Sized, const M: usize, const N: usize>(array2d: [[T; N]; M]) -> Vec<Vec<T>> {
+pub fn array2d_to_vec2d<T: Sized, const M: usize, const N: usize>(
+    array2d: [[T; N]; M],
+) -> Vec<Vec<T>> {
     array2d.into_iter().fold(vec![], |mut vec2d, arr| {
         vec2d.push(Vec::from(arr));
         vec2d

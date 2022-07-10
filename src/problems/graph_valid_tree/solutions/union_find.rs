@@ -1,13 +1,11 @@
 struct UnionFind {
-    parents: Vec<usize>
+    parents: Vec<usize>,
 }
 
 impl UnionFind {
     pub fn new(n: usize) -> Self {
         let parents = (0..n).map(|n| n).collect();
-        UnionFind {
-            parents
-        }
+        UnionFind { parents }
     }
 
     /// Finds parent of node
@@ -24,7 +22,7 @@ impl UnionFind {
         let root_a = self.find(&a);
         let root_b = self.find(&b);
 
-        // Check if 
+        // Check if
         if root_a == root_b {
             return false;
         }
@@ -38,7 +36,7 @@ impl UnionFind {
 #[allow(unused)] // remove allow when implementing
 pub fn valid_tree(n: i32, edges: Vec<Vec<i32>>) -> bool {
     let n = n as usize;
-    if edges.len() != n-1 {
+    if edges.len() != n - 1 {
         return false;
     }
 
@@ -59,7 +57,6 @@ pub fn valid_tree(n: i32, edges: Vec<Vec<i32>>) -> bool {
     // true
 }
 
-
 pub mod test {
     #[allow(unused_imports)]
     use crate::utils::test_utils::array2d_to_vec2d;
@@ -67,12 +64,12 @@ pub mod test {
     #[test]
     fn unit() {
         let n = 5;
-        let edges = array2d_to_vec2d([[0,1],[0,2],[0,3],[1,4]]);
+        let edges = array2d_to_vec2d([[0, 1], [0, 2], [0, 3], [1, 4]]);
         let output = true;
         assert_eq!(output, super::valid_tree(n, edges));
 
         let n = 5;
-        let edges = array2d_to_vec2d([[0,1],[1,2],[2,3],[1,3],[1,4]]);
+        let edges = array2d_to_vec2d([[0, 1], [1, 2], [2, 3], [1, 3], [1, 4]]);
         let output = false;
         assert_eq!(output, super::valid_tree(n, edges));
     }

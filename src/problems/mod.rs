@@ -13,6 +13,7 @@ pub mod decode_ways;
 pub mod design_add_and_search_words_data_structure;
 pub mod find_median_from_datastream;
 pub mod find_minimum_in_rotated_sorted_array;
+pub mod graph_valid_tree;
 pub mod group_anagrams;
 pub mod house_robber;
 pub mod house_robber_ii;
@@ -20,6 +21,7 @@ pub mod implement_trie_prefix_tree;
 pub mod invert_binary_tree;
 pub mod jump_game;
 pub mod kth_smallest_element_in_a_bst;
+pub mod longest_common_subsequence;
 pub mod longest_increasing_subsequence;
 pub mod longest_palindromic_substring;
 pub mod longest_repeating_character_replacement;
@@ -56,8 +58,6 @@ pub mod validate_binary_search;
 pub mod word_break;
 pub mod word_search;
 pub mod word_search_ii;
-pub mod graph_valid_tree;
-pub mod longest_common_subsequence;
 
 #[allow(dead_code)]
 #[derive(Default)]
