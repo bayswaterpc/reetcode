@@ -18,6 +18,7 @@ pub mod group_anagrams;
 pub mod house_robber;
 pub mod house_robber_ii;
 pub mod implement_trie_prefix_tree;
+pub mod insert_interval;
 pub mod invert_binary_tree;
 pub mod jump_game;
 pub mod kth_smallest_element_in_a_bst;
@@ -58,7 +59,6 @@ pub mod validate_binary_search;
 pub mod word_break;
 pub mod word_search;
 pub mod word_search_ii;
-pub mod insert_interval;
 
 #[allow(dead_code)]
 #[derive(Default)]
