@@ -58,6 +58,7 @@ pub mod validate_binary_search;
 pub mod word_break;
 pub mod word_search;
 pub mod word_search_ii;
+pub mod insert_interval;
 
 #[allow(dead_code)]
 #[derive(Default)]
