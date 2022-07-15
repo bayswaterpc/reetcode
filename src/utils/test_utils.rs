@@ -36,7 +36,7 @@ pub fn str_vec_2d_contents_same(strs1: Vec<Vec<String>>, strs2: Vec<Vec<String>>
 
 #[allow(dead_code)]
 pub fn array2d_to_vec2d<T: Sized, const M: usize, const N: usize>(
-    array2d: [[T; N]; M],
+    array2d: [[T; M]; N],
 ) -> Vec<Vec<T>> {
     array2d.into_iter().fold(vec![], |mut vec2d, arr| {
         vec2d.push(Vec::from(arr));

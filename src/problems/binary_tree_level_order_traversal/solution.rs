@@ -8,7 +8,6 @@ impl Solution {
     //pub fn level_order(root: OptTreeNode) -> Vec<Vec<i32>> {
     pub fn binary_tree_level_order_traversal(root: OptTreeNode) -> Vec<Vec<i32>> {
         let mut res: Vec<Vec<i32>> = Vec::new();
-
         fn recurse(root: &OptTreeNode, res: &mut Vec<Vec<i32>>, level: usize) {
             if let Some(r) = root {
                 if res.len() == level {
