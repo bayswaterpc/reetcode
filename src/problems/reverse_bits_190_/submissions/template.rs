@@ -1,11 +1,11 @@
-#[allow(unused)] //remove when implementing
-pub fn spiral_order(matrix: Vec<Vec<i32>>) -> Vec<i32> {
-    vec![]
+#[allow(unused)] //remove unused when implementing
+pub fn reverse_bits(x: u32) -> u32 {
+    1
 }
 
 pub mod test {
     #[allow(unused_imports)]
-    use crate::problems::spiral_matrix::test::do_unit;
+    use crate::problems::reverse_bits_190_::test::do_unit;
 
     #[allow(dead_code)]
     //#[test] //replace allow with test when ready
@@ -14,9 +14,9 @@ pub mod test {
     // cargo test --package reetcode --lib -- problems::{problemName}::submissions::{submissionUuid}::test::unq_test_name --exact --nocapture
     fn unit() {
         do_unit(
-            [[1, 2, 3], [4, 5, 6], [7, 8, 9]],
-            [1, 2, 3, 6, 9, 8, 7, 4, 5],
-            super::spiral_order,
+            "00000010100101000001111010011100",
+            964176192,
+            super::reverse_bits,
         );
     }
 }

@@ -1,11 +1,11 @@
-#[allow(unused)] //remove when implementing
-pub fn spiral_order(matrix: Vec<Vec<i32>>) -> Vec<i32> {
-    vec![]
+#[allow(non_snake_case, unused)] //remove unused when implementing
+pub fn hammingWeight(n: u32) -> i32 {
+    1
 }
 
 pub mod test {
     #[allow(unused_imports)]
-    use crate::problems::spiral_matrix::test::do_unit;
+    use crate::problems::number_of_1_bits::test::do_unit;
 
     #[allow(dead_code)]
     //#[test] //replace allow with test when ready
@@ -13,10 +13,8 @@ pub mod test {
     // change name to a unique test name and run `cargo test unq_name` or  run ..
     // cargo test --package reetcode --lib -- problems::{problemName}::submissions::{submissionUuid}::test::unq_test_name --exact --nocapture
     fn unit() {
-        do_unit(
-            [[1, 2, 3], [4, 5, 6], [7, 8, 9]],
-            [1, 2, 3, 6, 9, 8, 7, 4, 5],
-            super::spiral_order,
-        );
+        do_unit("00000000000000000000000000001011", 3, super::hammingWeight);
+        do_unit("00000000000000000000000010000000", 1, super::hammingWeight);
+        do_unit("11111111111111111111111111111101", 31, super::hammingWeight);
     }
 }

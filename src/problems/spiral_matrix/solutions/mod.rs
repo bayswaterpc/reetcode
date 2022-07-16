@@ -66,7 +66,7 @@ pub fn spiral_order(matrix: Vec<Vec<i32>>) -> Vec<i32> {
 }
 
 pub mod test {
-    #[allow(unused_imports, clippy::ptr_arg)]
+    #[allow(unused_imports)]
     use crate::problems::spiral_matrix::test::do_unit;
 
     #[test] //replace allow with test when ready
