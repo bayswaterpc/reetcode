@@ -52,6 +52,7 @@ pub mod rotate_image;
 pub mod same_tree;
 pub mod search_in_rotated_sorted_array;
 pub mod serialize_and_deserialize_binary_tree;
+pub mod set_matrix_zeroes;
 pub mod shortest_word_distance;
 pub mod spiral_matrix;
 pub mod subtree_of_another_tree;
