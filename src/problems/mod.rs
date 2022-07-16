@@ -69,6 +69,7 @@ pub mod top_k_frequent_elements;
 pub mod two_sum;
 pub mod unique_paths;
 pub mod valid_palindrome;
+pub mod valid_palindrome_125_;
 pub mod valid_parentheses;
 pub mod validate_binary_search;
 pub mod word_break;

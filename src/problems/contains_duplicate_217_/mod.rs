@@ -6,7 +6,7 @@ use std::collections::HashSet;
 
 impl Solution {
     /// Solution to [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/)
-    pub fn contains_duplicate(nums: Vec<i32>) -> bool {
+    pub fn contains_duplicate_217_(nums: Vec<i32>) -> bool {
         let mut n_set = HashSet::new();
         for n in nums {
             if n_set.contains(&n) {
