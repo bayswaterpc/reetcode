@@ -1,3 +1,6 @@
+pub mod solutions;
+pub mod submissions;
+
 use super::Solution;
 use std::collections::HashSet;
 
@@ -18,16 +21,14 @@ impl Solution {
 mod test {
     #[allow(unused_imports)]
     use super::Solution;
+    use std::fmt::Debug;
 
-    #[test]
-    fn unit() {
-        let nums = vec![1, 2, 3, 1];
-        assert_eq!(true, Solution::contains_duplicate(nums));
-
-        let nums = vec![1, 2, 3, 4];
-        assert_eq!(false, Solution::contains_duplicate(nums));
-
-        let nums = vec![1, 1, 1, 3, 3, 4, 3, 2, 4, 2];
-        assert_eq!(true, Solution::contains_duplicate(nums));
+    #[allow(dead_code)]
+    pub fn do_unit<const N: usize, T: Clone + Debug + PartialEq, U: PartialEq + Debug>(
+        input: [T; N],
+        output: U,
+        ff: fn(Vec<T>) -> U,
+    ) {
+        assert_eq!(output, ff(input.to_vec()));
     }
 }
