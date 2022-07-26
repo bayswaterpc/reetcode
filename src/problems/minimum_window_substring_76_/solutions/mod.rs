@@ -81,7 +81,7 @@ pub fn min_window(s: String, t: String) -> String {
         }
     }
     if let Some((lb, rb)) = candidate {
-        (&s[lb..rb]).to_string()
+        s[lb..rb].to_string()
     } else {
         "".to_string()
     }
