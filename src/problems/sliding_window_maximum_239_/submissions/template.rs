@@ -1,7 +1,7 @@
 #[allow(unused)] //remove unused when implementing
-    pub fn max_sliding_window(nums: Vec<i32>, k: i32) -> Vec<i32> {
-        vec![]
-    }
+pub fn max_sliding_window(nums: Vec<i32>, k: i32) -> Vec<i32> {
+    vec![]
+}
 
 pub mod test {
     #[allow(unused_imports)]
@@ -13,8 +13,12 @@ pub mod test {
     // change name to a unique test name and run `cargo test unq_name` or  run ..
     // cargo test --package reetcode --lib -- problems::{problemName}::submissions::{submissionUuid}::test::unq_test_name --exact --nocapture
     fn unit() {
-        do_unit([1,3,-1,-3,5,3,6,7], 3, [3,3,5,5,6,7], super::max_sliding_window);
+        do_unit(
+            [1, 3, -1, -3, 5, 3, 6, 7],
+            3,
+            [3, 3, 5, 5, 6, 7],
+            super::max_sliding_window,
+        );
         do_unit([1], 1, [1], super::max_sliding_window);
-
     }
 }

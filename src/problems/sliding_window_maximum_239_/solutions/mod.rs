@@ -6,7 +6,7 @@ pub fn max_sliding_window(nums: Vec<i32>, k: i32) -> Vec<i32> {
     for ii in 0..nums.len() {
         let val = nums[ii];
         let ii = ii as i32;
-        while ! deque.is_empty() && deque.back().unwrap().0 < val {
+        while !deque.is_empty() && deque.back().unwrap().0 < val {
             deque.pop_back();
         }
 
@@ -25,13 +25,16 @@ pub fn max_sliding_window(nums: Vec<i32>, k: i32) -> Vec<i32> {
 pub mod test {
     #[allow(unused_imports)]
     use crate::problems::sliding_window_maximum_239_::test::do_unit;
-    
 
-    #[test] 
+    #[test]
     fn unit() {
-        do_unit([1,-1], 1, [1,-1], super::max_sliding_window);
-        do_unit([1,3,-1,-3,5,3,6,7], 3, [3,3,5,5,6,7], super::max_sliding_window);
+        do_unit([1, -1], 1, [1, -1], super::max_sliding_window);
+        do_unit(
+            [1, 3, -1, -3, 5, 3, 6, 7],
+            3,
+            [3, 3, 5, 5, 6, 7],
+            super::max_sliding_window,
+        );
         do_unit([1], 1, [1], super::max_sliding_window);
-
     }
 }

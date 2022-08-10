@@ -62,6 +62,7 @@ pub mod search_in_rotated_sorted_array_33_;
 pub mod serialize_and_deserialize_binary_tree_297_;
 pub mod set_matrix_zeroes_73_;
 pub mod shortest_word_distance_243_;
+pub mod sliding_window_maximum_239_;
 pub mod spiral_matrix_54_;
 pub mod subtree_of_another_tree_572_;
 pub mod sum_of_two_integers_371;
@@ -78,7 +79,6 @@ pub mod validate_binary_search_tree_98_;
 pub mod word_break_139_;
 pub mod word_search_79_;
 pub mod word_search_ii_212_;
-pub mod sliding_window_maximum_239_;
 
 #[allow(dead_code)]
 #[derive(Default)]

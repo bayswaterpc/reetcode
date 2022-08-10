@@ -10,8 +10,12 @@ impl Solution {
 
 pub mod test {
     #[allow(dead_code)]
-    pub fn do_unit<const M: usize, const K: usize, T: Sized + PartialEq + std::fmt::Debug + Clone>(
-        nums: [T; M], 
+    pub fn do_unit<
+        const M: usize,
+        const K: usize,
+        T: Sized + PartialEq + std::fmt::Debug + Clone,
+    >(
+        nums: [T; M],
         k: T,
         output: [T; K],
         max_sliding_window: fn(nums: Vec<T>, k: T) -> Vec<T>,
