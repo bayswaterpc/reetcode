@@ -48,6 +48,7 @@ pub mod number_of_connected_components_in_an_undirected_graph_323_;
 pub mod number_of_islands_200_;
 pub mod pacific_atlantic_water_flow_417_;
 pub mod palindromic_substrings_647_;
+pub mod permutation_in_string_567_;
 pub mod product_of_array_except_self_238_;
 pub mod remove_nth_node_from_end_of_list_19_;
 pub mod reorder_list_143_;
