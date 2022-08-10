@@ -78,6 +78,7 @@ pub mod validate_binary_search_tree_98_;
 pub mod word_break_139_;
 pub mod word_search_79_;
 pub mod word_search_ii_212_;
+pub mod sliding_window_maximum_239_;
 
 #[allow(dead_code)]
 #[derive(Default)]
