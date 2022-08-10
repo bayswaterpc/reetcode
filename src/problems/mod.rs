@@ -1,6 +1,7 @@
 pub mod best_time_to_buy_and_sell_stock_121_;
 pub mod binary_tree_level_order_traversal_102_;
 pub mod binary_tree_maximum_path_sum_124_;
+pub mod car_fleet_853_;
 pub mod climbing_stairs_70_;
 pub mod coin_change_322_;
 pub mod combination_sum_32_;
@@ -10,6 +11,7 @@ pub mod container_with_most_water_11_;
 pub mod contains_duplicate_217_;
 pub mod counting_bits_338_;
 pub mod course_schedule_207_;
+pub mod daily_temperatures_739_;
 pub mod decode_ways_91_;
 pub mod design_add_and_search_words_data_structure_211_;
 pub mod encode_and_decode_strings_271_;
@@ -79,6 +81,8 @@ pub mod validate_binary_search_tree_98_;
 pub mod word_break_139_;
 pub mod word_search_79_;
 pub mod word_search_ii_212_;
+pub mod generate_parentheses_22_;
+pub mod largest_rectangle_in_histogram_84_;
 
 #[allow(dead_code)]
 #[derive(Default)]
