@@ -1,18 +1,22 @@
 pub fn rotate(matrix: &mut Vec<Vec<i32>>) {
-    matrix.reverse();
-
-    for i in 0..matrix.len() {
-        for j in 0..i {
-            let tmp = matrix[i][j];
-            matrix[i][j] = matrix[j][i];
-            matrix[j][i] = tmp;
+    let n = matrix.len();
+    let ni = n - 1;
+    // println!("{} {} {}", n,  n/2, n%2, n/2 + n%2 );
+    for i in 0..(n / 2 + n % 2) {
+        for j in 0..(n / 2) {
+            //swapping counterclockwise reserve & end at ii, jj
+            let tmp = matrix[ni - j][i];
+            matrix[ni - j][i] = matrix[ni - i][ni - j];
+            matrix[ni - i][ni - j] = matrix[j][ni - i];
+            matrix[j][ni - i] = matrix[i][j];
+            matrix[i][j] = tmp;
         }
     }
 }
 
 pub mod test {
     #[allow(unused_imports)]
-    use crate::problems::rotate_image::test::test_rotate;
+    use crate::problems::rotate_image_48_::test::test_rotate;
 
     // #[allow(dead_code)]
     #[test] //replace allow with test when ready

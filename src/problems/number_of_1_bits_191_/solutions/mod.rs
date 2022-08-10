@@ -11,7 +11,7 @@ pub fn hammingWeight(n: u32) -> i32 {
 
 pub mod test {
     #[allow(unused_imports)]
-    use crate::problems::number_of_1_bits::test::do_unit;
+    use crate::problems::number_of_1_bits_191_::test::do_unit;
 
     #[test] //replace allow with test when ready
             // Use VsCode run or debug options or..

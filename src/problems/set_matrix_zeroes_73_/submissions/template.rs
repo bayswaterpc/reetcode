@@ -5,7 +5,7 @@ pub fn set_zeroes(matrix: &mut Vec<Vec<i32>>) {
 
 pub mod test {
     #[allow(unused_imports)]
-    use crate::problems::set_matrix_zeroes::test::do_unit;
+    use crate::problems::set_matrix_zeroes_73_::test::do_unit;
 
     #[allow(dead_code)]
     //#[test] //replace allow with test when ready

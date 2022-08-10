@@ -5,7 +5,7 @@ pub fn rotate(matrix: &mut Vec<Vec<i32>>) {
 
 pub mod test {
     #[allow(unused_imports)]
-    use crate::problems::rotate_image::test::test_rotate;
+    use crate::problems::rotate_image_48_::test::test_rotate;
 
     #[allow(dead_code)]
     // #[test] //replace allow with test when ready
