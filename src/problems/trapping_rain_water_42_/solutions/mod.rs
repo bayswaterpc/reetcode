@@ -23,9 +23,9 @@ pub mod test {
     #[allow(unused_imports)]
     use crate::problems::trapping_rain_water_42_::test::do_unit;
 
-    #[test] 
+    #[test]
     fn unit() {
-        do_unit([0,1,0,2,1,0,1,3,2,1,2,1], 6, super::trap);
-        do_unit([4,2,0,3,2,5], 9, super::trap);
+        do_unit([0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1], 6, super::trap);
+        do_unit([4, 2, 0, 3, 2, 5], 9, super::trap);
     }
 }

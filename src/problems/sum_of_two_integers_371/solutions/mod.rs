@@ -29,7 +29,7 @@ pub mod test {
     #[allow(unused_imports)]
     use crate::problems::sum_of_two_integers_371::test::do_unit;
 
-    #[test] 
+    #[test]
     fn unit() {
         do_unit((1, 2), 3, super::get_sum);
         do_unit((2, 3), 5, super::get_sum);

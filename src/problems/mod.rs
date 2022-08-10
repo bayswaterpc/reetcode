@@ -66,16 +66,17 @@ pub mod subtree_of_another_tree_572_;
 pub mod sum_of_two_integers_371;
 pub mod three_sum_15_;
 pub mod top_k_frequent_elements_347_;
+pub mod trapping_rain_water_42_;
 pub mod two_sum_1_;
+pub mod two_sum_ii_167_;
 pub mod unique_paths_62_;
 pub mod valid_palindrome_125_;
 pub mod valid_parentheses_20_;
+pub mod valid_sudoku_36_;
 pub mod validate_binary_search_tree_98_;
 pub mod word_break_139_;
 pub mod word_search_79_;
 pub mod word_search_ii_212_;
-pub mod two_sum_ii_167_;
-pub mod trapping_rain_water_42_;
 
 #[allow(dead_code)]
 #[derive(Default)]

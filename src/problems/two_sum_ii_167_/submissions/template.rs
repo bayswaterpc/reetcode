@@ -13,8 +13,8 @@ pub mod test {
     // change name to a unique test name and run `cargo test unq_name` or  run ..
     // cargo test --package reetcode --lib -- problems::{problemName}::submissions::{submissionUuid}::test::unq_test_name --exact --nocapture
     fn unit() {
-        do_unit([2,7,11,15], 9, [1,2], super::two_sum);
-        do_unit([2,3,4], 6, [1,3], super::two_sum);
-        do_unit([-1,0], -1, [1,2], super::two_sum);
+        do_unit([2, 7, 11, 15], 9, [1, 2], super::two_sum);
+        do_unit([2, 3, 4], 6, [1, 3], super::two_sum);
+        do_unit([-1, 0], -1, [1, 2], super::two_sum);
     }
 }
