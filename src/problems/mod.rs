@@ -74,6 +74,8 @@ pub mod validate_binary_search_tree_98_;
 pub mod word_break_139_;
 pub mod word_search_79_;
 pub mod word_search_ii_212_;
+pub mod two_sum_ii_167_;
+pub mod trapping_rain_water_42_;
 
 #[allow(dead_code)]
 #[derive(Default)]
