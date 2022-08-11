@@ -15,6 +15,7 @@ pub mod course_schedule_207_;
 pub mod daily_temperatures_739_;
 pub mod decode_ways_91_;
 pub mod design_add_and_search_words_data_structure_211_;
+pub mod diameter_of_binary_tree_543_;
 pub mod encode_and_decode_strings_271_;
 pub mod find_median_from_datastream;
 pub mod find_minimum_in_rotated_sorted_array_153_;
