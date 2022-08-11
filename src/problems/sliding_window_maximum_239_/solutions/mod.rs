@@ -3,7 +3,7 @@ use std::collections::VecDeque;
 pub fn max_sliding_window(nums: Vec<i32>, k: i32) -> Vec<i32> {
     let mut deque: VecDeque<(i32, i32)> = VecDeque::new();
     let mut res = Vec::new();
-    for (ii, val ) in nums.iter().enumerate() {
+    for (ii, val) in nums.iter().enumerate() {
         let ii = ii as i32;
         while !deque.is_empty() && deque.back().unwrap().0 < *val {
             deque.pop_back();
