@@ -83,6 +83,8 @@ pub mod validate_binary_search_tree_98_;
 pub mod word_break_139_;
 pub mod word_search_79_;
 pub mod word_search_ii_212_;
+pub mod koko_eating_bananas_875_;
+pub mod time_based_key_value_store_981_;
 
 #[allow(dead_code)]
 #[derive(Default)]
