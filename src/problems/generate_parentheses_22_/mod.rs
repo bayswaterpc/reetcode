@@ -16,6 +16,9 @@ pub mod test {
         output: [&str; M],
         generate_parentheses: fn(T) -> Vec<String>,
     ) {
-        assert_eq!(str_vec_to_string_vec(output.to_vec()), generate_parentheses(input));
+        assert_eq!(
+            str_vec_to_string_vec(output.to_vec()),
+            generate_parentheses(input)
+        );
     }
 }

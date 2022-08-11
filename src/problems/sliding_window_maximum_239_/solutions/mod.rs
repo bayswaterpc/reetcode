@@ -3,14 +3,13 @@ use std::collections::VecDeque;
 pub fn max_sliding_window(nums: Vec<i32>, k: i32) -> Vec<i32> {
     let mut deque: VecDeque<(i32, i32)> = VecDeque::new();
     let mut res = Vec::new();
-    for ii in 0..nums.len() {
-        let val = nums[ii];
+    for (ii, val ) in nums.iter().enumerate() {
         let ii = ii as i32;
-        while !deque.is_empty() && deque.back().unwrap().0 < val {
+        while !deque.is_empty() && deque.back().unwrap().0 < *val {
             deque.pop_back();
         }
 
-        deque.push_back((val, ii));
+        deque.push_back((*val, ii));
         while ii - deque.front().unwrap().1 + 1 > k {
             deque.pop_front();
         }

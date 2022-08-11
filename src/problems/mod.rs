@@ -17,6 +17,7 @@ pub mod design_add_and_search_words_data_structure_211_;
 pub mod encode_and_decode_strings_271_;
 pub mod find_median_from_datastream;
 pub mod find_minimum_in_rotated_sorted_array_153_;
+pub mod generate_parentheses_22_;
 pub mod graph_valid_tree_261_;
 pub mod group_anagrams_49_;
 pub mod house_robber_213_;
@@ -26,6 +27,7 @@ pub mod insert_interval_57_;
 pub mod invert_binary_tree_226_;
 pub mod jump_game_55_;
 pub mod kth_smallest_element_in_a_bst_230_;
+pub mod largest_rectangle_in_histogram_84_;
 pub mod longest_common_subsequence_1143_;
 pub mod longest_consecutive_sequence_128_;
 pub mod longest_increasing_subsequence_300_;
@@ -81,8 +83,6 @@ pub mod validate_binary_search_tree_98_;
 pub mod word_break_139_;
 pub mod word_search_79_;
 pub mod word_search_ii_212_;
-pub mod generate_parentheses_22_;
-pub mod largest_rectangle_in_histogram_84_;
 
 #[allow(dead_code)]
 #[derive(Default)]

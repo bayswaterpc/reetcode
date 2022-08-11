@@ -1,5 +1,4 @@
-
-fn backtrack (permutations: &mut Vec<String>, stack: &mut String, nl: i32, nr: i32, n: i32) {
+fn backtrack(permutations: &mut Vec<String>, stack: &mut String, nl: i32, nr: i32, n: i32) {
     if stack.len() == (n * 2) as usize {
         permutations.push(stack.clone());
         return;
@@ -17,13 +16,12 @@ fn backtrack (permutations: &mut Vec<String>, stack: &mut String, nl: i32, nr: i
 }
 
 pub fn generate_parenthesis(n: i32) -> Vec<String> {
-        let mut permutations = vec![];
-        let mut stack = "".to_string();
+    let mut permutations = vec![];
+    let mut stack = "".to_string();
 
+    backtrack(&mut permutations, &mut stack, 0, 0, n);
 
-        backtrack(&mut permutations,  &mut stack, 0, 0, n);
-
-        permutations
+    permutations
 }
 pub mod test {
     #[allow(unused_imports)]
@@ -31,7 +29,11 @@ pub mod test {
 
     #[test]
     fn unit() {
-        do_unit( 3, ["((()))","(()())","(())()","()(())","()()()"], super::generate_parenthesis);
-        do_unit( 1, ["()"], super::generate_parenthesis);
+        do_unit(
+            3,
+            ["((()))", "(()())", "(())()", "()(())", "()()()"],
+            super::generate_parenthesis,
+        );
+        do_unit(1, ["()"], super::generate_parenthesis);
     }
 }
