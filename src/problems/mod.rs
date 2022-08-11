@@ -1,3 +1,4 @@
+pub mod balanced_binary_tree_110_;
 pub mod best_time_to_buy_and_sell_stock_121_;
 pub mod binary_tree_level_order_traversal_102_;
 pub mod binary_tree_maximum_path_sum_124_;
