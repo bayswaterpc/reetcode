@@ -23,8 +23,8 @@ pub mod test {
     #[test]
     fn unit() {
         do_unit([312884470], 968709470, 1, super::min_eating_speed);
-        do_unit([3,6,7,11], 8, 4, super::min_eating_speed);
-        do_unit([30,11,23,4,20], 5, 30, super::min_eating_speed);
-        do_unit([30,11,23,4,20], 6, 23, super::min_eating_speed);
+        do_unit([3, 6, 7, 11], 8, 4, super::min_eating_speed);
+        do_unit([30, 11, 23, 4, 20], 5, 30, super::min_eating_speed);
+        do_unit([30, 11, 23, 4, 20], 6, 23, super::min_eating_speed);
     }
 }
