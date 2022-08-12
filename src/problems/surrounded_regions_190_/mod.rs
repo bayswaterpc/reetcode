@@ -4,7 +4,7 @@ pub mod submissions;
 
 impl Solution {
     pub fn surrounded_regions_190_(grid: &mut Vec<Vec<char>>) {
-        solutions::solve( grid)
+        solutions::solve(grid)
     }
 }
 
