@@ -69,6 +69,7 @@ pub mod reverse_bits_190_;
 pub mod reverse_linked_list_206_;
 pub mod roman_to_integer_13_;
 pub mod rotate_image_48_;
+pub mod rotting_oranges_994_;
 pub mod same_tree_100_;
 pub mod search_a_2d_matrix_74_;
 pub mod search_in_rotated_sorted_array_33_;
