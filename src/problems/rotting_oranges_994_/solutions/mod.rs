@@ -6,11 +6,11 @@ pub fn oranges_rotting(mut grid: Vec<Vec<i32>>) -> i32 {
 
     let mut fresh_oranges = 0;
 
-    for i in 0..m {
-        for j in 0..n {
-            if grid[i][j] == 2 {
+    for (i, row) in grid.iter().enumerate() {
+        for (j, val) in row.iter().enumerate() {
+            if *val == 2 {
                 rotten.push_back((i, j));
-            } else if grid[i][j] == 1 {
+            } else if *val == 1 {
                 fresh_oranges += 1;
             }
         }
@@ -19,7 +19,7 @@ pub fn oranges_rotting(mut grid: Vec<Vec<i32>>) -> i32 {
     let dirs = [(1, 0), (0, 1), (-1, 0), (0, -1)];
     let mut days = 0;
 
-    while rotten.len() > 0 {
+    while !rotten.is_empty() {
         let mut decayed = false;
         for _ in 0..rotten.len() {
             let (i, j) = rotten.pop_front().unwrap();

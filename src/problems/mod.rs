@@ -62,6 +62,7 @@ pub mod pacific_atlantic_water_flow_417_;
 pub mod palindromic_substrings_647_;
 pub mod permutation_in_string_567_;
 pub mod product_of_array_except_self_238_;
+pub mod redundant_connections_684_;
 pub mod remove_nth_node_from_end_of_list_19_;
 pub mod reorder_list_143_;
 pub mod repeated_substring_pattern_459_;
