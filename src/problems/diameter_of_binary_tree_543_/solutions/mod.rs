@@ -1,5 +1,7 @@
 use crate::utils::common::OptTreeNode;
 
+// pub type OptTreeNode = Option<Rc<RefCell<TreeNode>>>;
+
 // Fills out max_diam and returns longest branch
 fn dfs(root: OptTreeNode, max_diam: &mut i32) -> i32 {
     if let Some(ref root) = root {
@@ -12,7 +14,6 @@ fn dfs(root: OptTreeNode, max_diam: &mut i32) -> i32 {
     }
 }
 
-// pub type OptTreeNode = Option<Rc<RefCell<TreeNode>>>;
 pub fn diameter_of_binary_tree(root: OptTreeNode) -> i32 {
     let mut max_depth = i32::MIN;
     dfs(root, &mut max_depth);
