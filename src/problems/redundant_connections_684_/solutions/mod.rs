@@ -1,11 +1,6 @@
 use std::collections::HashSet;
 
-fn are_connected(
-    graph: &Vec<Vec<i32>>,
-    seen: &mut HashSet<i32>,
-    val: i32,
-    target: i32,
-) -> bool {
+fn are_connected(graph: &Vec<Vec<i32>>, seen: &mut HashSet<i32>, val: i32, target: i32) -> bool {
     if !seen.contains(&val) {
         seen.insert(val);
         if val == target {
@@ -37,7 +32,7 @@ pub fn find_redundant_connection(edges: Vec<Vec<i32>>) -> Vec<i32> {
         graph[edges[i][1] as usize].push(edges[i][0]);
     }
 
- res
+    res
 }
 
 pub mod test {
